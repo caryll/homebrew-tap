@@ -5,14 +5,17 @@
 class OtfccMac64 < Formula
   desc "Parses & writes SFNT structures."
   homepage "https://github.com/caryll/otfcc/releases/"
-  url "https://github.com/caryll/otfcc/releases/download/v0.2.4/otfcc-mac64-0.2.4.tar.xz"
-  version "0.2.4"
-  sha256 "d57ca35ab7e35d7fa67b157b8823fde082f08f14c4a4dbdb3e228df2235fbfa0"
+  url "https://github.com/caryll/otfcc/archive/v0.3.0.tar.gz"
+  version "0.3.0"
+  sha256 "6cfbc0984712b9e7037966998a495255e8bf8656a9e9120bd78644dbde43f2b4"
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
+    system "./dep/bin-osx/premake5", "xcode4"
+    system "xcodebuild", "-workspace", "build/xcode/otfcc.xcworkspace", "-scheme", "otfccbuild", "-configuration", "Release"
+    system "xcodebuild", "-workspace", "build/xcode/otfcc.xcworkspace", "-scheme", "otfccdump", "-configuration", "Release"
 
-    bin.install "otfccbuild"
-    bin.install "otfccdump"
+    bin.install "bin/Release-x64/otfccbuild"
+    bin.install "bin/Release-x64/otfccdump"
   end
 end
