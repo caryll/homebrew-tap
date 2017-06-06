@@ -5,7 +5,7 @@
 class OtfccMac64 < Formula
   desc "Parses & writes SFNT structures."
   homepage "https://github.com/caryll/otfcc/releases/"
-  url "https://github.com/caryll/otfcc/archive/0.7.2.tar.gz"
+  url "https://github.com/caryll/otfcc/archive/v0.7.2.tar.gz"
   version "0.7.2"
   sha256 "c89cd820066dcbe1aff9bc0c9e8788b36e7cefdc02abf1c891cee013fdbdab9a"
 
