@@ -5,9 +5,9 @@
 class OtfccMac64 < Formula
   desc "Parses & writes SFNT structures."
   homepage "https://github.com/caryll/otfcc/releases/"
-  url "https://github.com/caryll/otfcc/archive/v0.9.5.tar.gz"
-  version "0.9.5"
-  sha256 "c163ba3a1d94449fd5972b96399773389c8c48e82391726210075dd4bab13c8a"
+  url "https://github.com/caryll/otfcc/archive/v0.9.6.tar.gz"
+  version "0.9.6"
+  sha256 "01e1bb2d82e221488517dfec4fdd3fa342c4c6b6de6e654bec3fd78f77079542"
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
