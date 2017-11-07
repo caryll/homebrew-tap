@@ -21,7 +21,7 @@ class OtfccMac64 < Formula
               "-scheme", "otfccdump",
               "-configuration", "Release"
 
-    bin.install "bin/Release-x64/otfccbuild"
-    bin.install "bin/Release-x64/otfccdump"
+    bin.install "bin/release-x64/otfccbuild"
+    bin.install "bin/release-x64/otfccdump"
   end
 end
